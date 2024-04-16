@@ -11,7 +11,6 @@
 		AB0881392BB9FFBC001AE1DC /* HairStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0881382BB9FFBC001AE1DC /* HairStyleView.swift */; };
 		AB08813B2BBA0854001AE1DC /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08813A2BBA0854001AE1DC /* DataService.swift */; };
 		AB0C52C52BCD8B4200E5D0BC /* SelectedStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C52C42BCD8B4200E5D0BC /* SelectedStyleView.swift */; };
-		AB0C52C72BCE992F00E5D0BC /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C52C62BCE992F00E5D0BC /* GalleryView.swift */; };
 		AB908B2E2BB9E1AA00FAECAC /* TrimsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB908B2D2BB9E1AA00FAECAC /* TrimsApp.swift */; };
 		AB908B302BB9E1AA00FAECAC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB908B2F2BB9E1AA00FAECAC /* MainView.swift */; };
 		AB908B322BB9E1AC00FAECAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB908B312BB9E1AC00FAECAC /* Assets.xcassets */; };
@@ -23,7 +22,6 @@
 		AB0881382BB9FFBC001AE1DC /* HairStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairStyleView.swift; sourceTree = "<group>"; };
 		AB08813A2BBA0854001AE1DC /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		AB0C52C42BCD8B4200E5D0BC /* SelectedStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedStyleView.swift; sourceTree = "<group>"; };
-		AB0C52C62BCE992F00E5D0BC /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		AB908B2A2BB9E1AA00FAECAC /* Trims.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trims.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB908B2D2BB9E1AA00FAECAC /* TrimsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimsApp.swift; sourceTree = "<group>"; };
 		AB908B2F2BB9E1AA00FAECAC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 				AB908B312BB9E1AC00FAECAC /* Assets.xcassets */,
 				AB908B332BB9E1AC00FAECAC /* Preview Content */,
 				AB0C52C42BCD8B4200E5D0BC /* SelectedStyleView.swift */,
-				AB0C52C62BCE992F00E5D0BC /* GalleryView.swift */,
 			);
 			path = Trims;
 			sourceTree = "<group>";
@@ -152,7 +149,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB0C52C72BCE992F00E5D0BC /* GalleryView.swift in Sources */,
 				AB908B302BB9E1AA00FAECAC /* MainView.swift in Sources */,
 				AB0881372BB9FF9C001AE1DC /* HairStyleModel.swift in Sources */,
 				AB0881392BB9FFBC001AE1DC /* HairStyleView.swift in Sources */,
