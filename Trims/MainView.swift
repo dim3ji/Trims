@@ -11,6 +11,9 @@ struct MainView: View {
     var dataService = DataService()
    @State var hairStylesList: [HairStyleModel] = [HairStyleModel]()
     @State var selectedImage = String()
+    @State private var selectedButtonIndex: Int?
+
+    let filters = ["All", "Low Cut", "Skin Fade", "Drop Fade"]
     var body: some View {
         NavigationView {
             ZStack{
@@ -22,51 +25,23 @@ struct MainView: View {
                     ScrollView(.horizontal,showsIndicators:false){
                         HStack{
                             Spacer()
-                            Spacer()
-                            Button("All"){
+                            ForEach(0..<filters.count, id: \.self) { index in
+                                Button(action: {
+                                    self.selectedButtonIndex = index
+                                    hairStylesList = dataService.getSortedData(sortType: filters[index].removingWhitespaces())
+                                }) {
+                                    Text(filters[index])
+                                        .frame(height: 10)
+                                        .padding()
+                                        .foregroundColor(buttonForegroundColor(for: index))
+                                        .background(buttonBackgroundColor(for: index))
+                                        .clipShape(Capsule())
+                                        .overlay( /// apply a rounded border
+                                            RoundedRectangle(cornerRadius: 20)
+                                                .stroke(.gray, lineWidth: 0.5)
+                                        )
+                                }
                             }
-                            .frame(height: 10)
-                            .padding()
-                            .foregroundColor(.white)
-                            .background(Color(.black))
-                            .clipShape(Capsule())
-
-                            Button("Low Cut"){
-                            }
-                            .frame(height: 11)
-                            .padding()
-                            .foregroundColor(.black)
-                            .background(Color(.white))
-                            .clipShape(Capsule())
-                            .overlay( /// apply a rounded border
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke(.gray, lineWidth: 0.5)
-                            )
-                            
-                            Button("Skin Fade"){
-                            }
-                            .frame(height: 11)
-                            .padding()
-                            .foregroundColor(.black)
-                            .background(Color(.white))
-                            .clipShape(Capsule())
-                            .overlay( /// apply a rounded border
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke(.gray, lineWidth: 0.5)
-                            )
-                            Spacer()
-                            Button("Drop Fade"){
-                            }
-                            .frame(height: 11)
-                            .padding()
-                            .foregroundColor(.black)
-                            .background(Color(.white))
-                            .clipShape(Capsule())
-                            .overlay( /// apply a rounded border
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke(.gray, lineWidth: 0.5)
-                            )
-                            Spacer()
                         }.padding([.bottom,.top],0.3)
                     }
 
@@ -80,6 +55,7 @@ struct MainView: View {
                                 }
                         }
                         .onAppear(perform: {
+                            selectedButtonIndex = 0
                             hairStylesList = dataService.getData()
                         })
                     }
@@ -89,6 +65,29 @@ struct MainView: View {
             }
             .ignoresSafeArea(edges: .bottom)
         }
+    }
+    
+    private func buttonBackgroundColor(for index: Int) -> Color {
+        if let selectedIndex = selectedButtonIndex {
+            return index == selectedIndex ? .black : .white
+        } else {
+            return .white
+        }
+    }
+    
+    private func buttonForegroundColor(for index: Int) -> Color {
+        if let selectedIndex = selectedButtonIndex {
+            return index == selectedIndex ? .white : .black
+        } else {
+            return .black
+        }
+    }
+    
+}
+
+extension String {
+    func removingWhitespaces() -> String {
+        return self.filter { !$0.isWhitespace }
     }
 }
 
