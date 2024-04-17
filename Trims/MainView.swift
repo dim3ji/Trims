@@ -44,7 +44,7 @@ struct MainView: View {
                             }
                         }.padding([.bottom,.top],0.3)
                     }
-
+                    
                     ScrollView(showsIndicators:false){
                         LazyVGrid(columns: [GridItem(.flexible(), spacing: 9),
                                             GridItem(.flexible())], spacing: 1){
