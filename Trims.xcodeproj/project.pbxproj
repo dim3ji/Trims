@@ -16,6 +16,7 @@
 		AB908B322BB9E1AC00FAECAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB908B312BB9E1AC00FAECAC /* Assets.xcassets */; };
 		AB908B352BB9E1AC00FAECAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB908B342BB9E1AC00FAECAC /* Preview Assets.xcassets */; };
 		AB96C34E2BD1D80000D4CA23 /* FilterSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB96C34D2BD1D80000D4CA23 /* FilterSelection.swift */; };
+		AB96C3502BD1E1FA00D4CA23 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB96C34F2BD1E1FA00D4CA23 /* ModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		AB908B312BB9E1AC00FAECAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB908B342BB9E1AC00FAECAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AB96C34D2BD1D80000D4CA23 /* FilterSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelection.swift; sourceTree = "<group>"; };
+		AB96C34F2BD1E1FA00D4CA23 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +68,11 @@
 				AB08813A2BBA0854001AE1DC /* DataService.swift */,
 				AB0881362BB9FF9C001AE1DC /* HairStyleModel.swift */,
 				AB0881382BB9FFBC001AE1DC /* HairStyleView.swift */,
+				AB0C52C42BCD8B4200E5D0BC /* SelectedStyleView.swift */,
 				AB908B312BB9E1AC00FAECAC /* Assets.xcassets */,
 				AB908B332BB9E1AC00FAECAC /* Preview Content */,
-				AB0C52C42BCD8B4200E5D0BC /* SelectedStyleView.swift */,
 				AB96C34D2BD1D80000D4CA23 /* FilterSelection.swift */,
+				AB96C34F2BD1E1FA00D4CA23 /* ModalView.swift */,
 			);
 			path = Trims;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				AB908B302BB9E1AA00FAECAC /* MainView.swift in Sources */,
 				AB96C34E2BD1D80000D4CA23 /* FilterSelection.swift in Sources */,
+				AB96C3502BD1E1FA00D4CA23 /* ModalView.swift in Sources */,
 				AB0881372BB9FF9C001AE1DC /* HairStyleModel.swift in Sources */,
 				AB0881392BB9FFBC001AE1DC /* HairStyleView.swift in Sources */,
 				AB0C52C52BCD8B4200E5D0BC /* SelectedStyleView.swift in Sources */,
