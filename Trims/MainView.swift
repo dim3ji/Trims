@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct MainView: View {
-    var dataService = DataService()
-   @State var hairStylesList: [HairStyleModel] = [HairStyleModel]()
+    @StateObject var filterSelection = FilterSelection()
+    @State var hairStylesList: [HairStyleModel] = []
     @State var selectedImage = String()
-    @State private var selectedButtonIndex: Int?
-
+    @State private var isFirstAppearance: Bool = true
+    
     let filters = ["All", "Low Cut", "Skin Fade", "Drop Fade"]
+    var dataService = DataService()
+    
     var body: some View {
         NavigationView {
             ZStack{
                 VStack(alignment: .center){
-                    Text("Trims")
+                    Text("💈 Trims 💈")
                         .font(.largeTitle)
                         .bold()
                     
@@ -27,7 +29,7 @@ struct MainView: View {
                             Spacer()
                             ForEach(0..<filters.count, id: \.self) { index in
                                 Button(action: {
-                                    self.selectedButtonIndex = index
+                                    filterSelection.selectedButtonIndex = index
                                     hairStylesList = dataService.getSortedData(sortType: filters[index].removingWhitespaces())
                                 }) {
                                     Text(filters[index])
@@ -44,7 +46,7 @@ struct MainView: View {
                             }
                         }.padding([.bottom,.top],0.3)
                     }
-
+                    
                     ScrollView(showsIndicators:false){
                         LazyVGrid(columns: [GridItem(.flexible(), spacing: 9),
                                             GridItem(.flexible())], spacing: 1){
@@ -55,8 +57,11 @@ struct MainView: View {
                                 }
                         }
                         .onAppear(perform: {
-                            selectedButtonIndex = 0
-                            hairStylesList = dataService.getData()
+                            if isFirstAppearance{
+                                hairStylesList = dataService.getData()
+                            }
+                            isFirstAppearance = false
+                            
                         })
                     }
 
@@ -64,20 +69,21 @@ struct MainView: View {
                 .padding(0.5)
             }
             .ignoresSafeArea(edges: .bottom)
+            .environmentObject(filterSelection)
         }
     }
     
     private func buttonBackgroundColor(for index: Int) -> Color {
-        if let selectedIndex = selectedButtonIndex {
-            return index == selectedIndex ? .black : .white
-        } else {
-            return .white
-        }
-    }
+        if index == filterSelection.selectedButtonIndex {
+             return .black
+         } else {
+             return .white
+         }
+     }
     
     private func buttonForegroundColor(for index: Int) -> Color {
-        if let selectedIndex = selectedButtonIndex {
-            return index == selectedIndex ? .white : .black
+        if index == filterSelection.selectedButtonIndex {
+            return .white
         } else {
             return .black
         }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SelectedStyleView: View {
     @Environment(\.presentationMode) var presentationMode
+    @State private var showModel = false
     var selectedImage: String
     var body: some View {
         ZStack{
@@ -19,7 +20,9 @@ struct SelectedStyleView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                 Spacer()
-                Image(systemName: "info.circle").imageScale(.large)
+                Button(action: { showModel = true }){
+                    Image(systemName: "info.circle").imageScale(.large)
+                }
             }
             .navigationBarBackButtonHidden()
             .toolbar{
@@ -32,6 +35,7 @@ struct SelectedStyleView: View {
                     })
                 }
             }
+            ModalView(isShowing: $showModel)
         }.foregroundColor(.white)
     }
 }
