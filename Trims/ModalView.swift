@@ -37,8 +37,8 @@ struct ModalView: View {
             
             ZStack{
                 Capsule()
-                    .frame(width: 40, height: 5)
-                    .background(Color.red)
+                    .frame(width: 35, height: 4)
+                    .foregroundColor(Color(.lightGray))
             }
             .frame(height: 40)
             .frame(maxWidth: .infinity)

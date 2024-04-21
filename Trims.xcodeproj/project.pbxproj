@@ -11,12 +11,15 @@
 		AB0881392BB9FFBC001AE1DC /* HairStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0881382BB9FFBC001AE1DC /* HairStyleView.swift */; };
 		AB08813B2BBA0854001AE1DC /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08813A2BBA0854001AE1DC /* DataService.swift */; };
 		AB0C52C52BCD8B4200E5D0BC /* SelectedStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C52C42BCD8B4200E5D0BC /* SelectedStyleView.swift */; };
+		AB162A032BD48946002E8A01 /* Main_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB162A022BD48946002E8A01 /* Main_View.swift */; };
+		AB162A052BD4913C002E8A01 /* SelectedStyleView_.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB162A042BD4913C002E8A01 /* SelectedStyleView_.swift */; };
 		AB908B2E2BB9E1AA00FAECAC /* TrimsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB908B2D2BB9E1AA00FAECAC /* TrimsApp.swift */; };
 		AB908B302BB9E1AA00FAECAC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB908B2F2BB9E1AA00FAECAC /* MainView.swift */; };
 		AB908B322BB9E1AC00FAECAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB908B312BB9E1AC00FAECAC /* Assets.xcassets */; };
 		AB908B352BB9E1AC00FAECAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB908B342BB9E1AC00FAECAC /* Preview Assets.xcassets */; };
 		AB96C34E2BD1D80000D4CA23 /* FilterSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB96C34D2BD1D80000D4CA23 /* FilterSelection.swift */; };
 		AB96C3502BD1E1FA00D4CA23 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB96C34F2BD1E1FA00D4CA23 /* ModalView.swift */; };
+		AB96C3522BD3F93E00D4CA23 /* PinterestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB96C3512BD3F93E00D4CA23 /* PinterestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		AB0881382BB9FFBC001AE1DC /* HairStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairStyleView.swift; sourceTree = "<group>"; };
 		AB08813A2BBA0854001AE1DC /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		AB0C52C42BCD8B4200E5D0BC /* SelectedStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedStyleView.swift; sourceTree = "<group>"; };
+		AB162A022BD48946002E8A01 /* Main_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_View.swift; sourceTree = "<group>"; };
+		AB162A042BD4913C002E8A01 /* SelectedStyleView_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedStyleView_.swift; sourceTree = "<group>"; };
 		AB908B2A2BB9E1AA00FAECAC /* Trims.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trims.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB908B2D2BB9E1AA00FAECAC /* TrimsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimsApp.swift; sourceTree = "<group>"; };
 		AB908B2F2BB9E1AA00FAECAC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -31,6 +36,7 @@
 		AB908B342BB9E1AC00FAECAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AB96C34D2BD1D80000D4CA23 /* FilterSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelection.swift; sourceTree = "<group>"; };
 		AB96C34F2BD1E1FA00D4CA23 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		AB96C3512BD3F93E00D4CA23 /* PinterestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 			children = (
 				AB908B2D2BB9E1AA00FAECAC /* TrimsApp.swift */,
 				AB908B2F2BB9E1AA00FAECAC /* MainView.swift */,
+				AB96C3512BD3F93E00D4CA23 /* PinterestView.swift */,
 				AB08813A2BBA0854001AE1DC /* DataService.swift */,
 				AB0881362BB9FF9C001AE1DC /* HairStyleModel.swift */,
 				AB0881382BB9FFBC001AE1DC /* HairStyleView.swift */,
@@ -73,6 +80,8 @@
 				AB908B332BB9E1AC00FAECAC /* Preview Content */,
 				AB96C34D2BD1D80000D4CA23 /* FilterSelection.swift */,
 				AB96C34F2BD1E1FA00D4CA23 /* ModalView.swift */,
+				AB162A022BD48946002E8A01 /* Main_View.swift */,
+				AB162A042BD4913C002E8A01 /* SelectedStyleView_.swift */,
 			);
 			path = Trims;
 			sourceTree = "<group>";
@@ -158,6 +167,9 @@
 				AB908B302BB9E1AA00FAECAC /* MainView.swift in Sources */,
 				AB96C34E2BD1D80000D4CA23 /* FilterSelection.swift in Sources */,
 				AB96C3502BD1E1FA00D4CA23 /* ModalView.swift in Sources */,
+				AB162A032BD48946002E8A01 /* Main_View.swift in Sources */,
+				AB162A052BD4913C002E8A01 /* SelectedStyleView_.swift in Sources */,
+				AB96C3522BD3F93E00D4CA23 /* PinterestView.swift in Sources */,
 				AB0881372BB9FF9C001AE1DC /* HairStyleModel.swift in Sources */,
 				AB0881392BB9FFBC001AE1DC /* HairStyleView.swift in Sources */,
 				AB0C52C52BCD8B4200E5D0BC /* SelectedStyleView.swift in Sources */,
@@ -296,6 +308,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Trims/Preview Content\"";
+				DEVELOPMENT_TEAM = X5P3649YZG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -324,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Trims/Preview Content\"";
+				DEVELOPMENT_TEAM = X5P3649YZG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

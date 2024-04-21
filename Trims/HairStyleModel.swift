@@ -11,4 +11,5 @@ struct HairStyleModel : Identifiable {
     var id : UUID = UUID()
     var imageName : String
     var tags : [String]
+    
 }

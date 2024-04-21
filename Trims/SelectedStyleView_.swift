@@ -1,17 +1,17 @@
 //
-//  SelectedStyleView.swift
+//  SelectedStyleView_.swift
 //  Trims
 //
-//  Created by Dimeji Adekanmbi on 15/04/2024.
+//  Created by Dimeji Adekanmbi on 21/04/2024.
 //
 
 import SwiftUI
 
-struct SelectedStyleView: View {
+struct SelectedStyleView_: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var showModel = false
     var selectedImage: String
-     var title = "Title" // Add a title property
+    @Binding var title: String // Add a title property
     
     var body: some View {
         NavigationView { // Wrap your view in a NavigationView
@@ -53,6 +53,7 @@ struct SelectedStyleView: View {
         })
     }
 }
+
 #Preview {
-    SelectedStyleView(selectedImage: "MidFades")
+    SelectedStyleView_(selectedImage: "MidFades", title:Binding.constant("My Title"))
 }
