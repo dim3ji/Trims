@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct Main_View: View {
     @StateObject var filterSelection = FilterSelection()
     @State var hairStylesList: [HairStyleModel] = []
     @State var selectedImage = String()
     @State private var isFirstAppearance: Bool = true
-    @State var sortType = ""
     
     let filters = ["All", "Low Cut", "Skin Fade", "Drop Fade"]
     var dataService = DataService()
@@ -34,7 +33,6 @@ struct MainView: View {
                             ForEach(0..<filters.count, id: \.self) { index in
                                 Button(action: {
                                     filterSelection.selectedButtonIndex = index
-                                    sortType = filters[index]
                                     hairStylesList = dataService.getSortedData(sortType: filters[index].removingWhitespaces())
                                 }) {
                                     Text(filters[index])
@@ -55,10 +53,7 @@ struct MainView: View {
                     ScrollView(showsIndicators:false){
                         PinterestView(spacing: 2, hairStylesList: hairStylesList)
                     }.onAppear(perform: {
-                        if isFirstAppearance{
-                            hairStylesList = dataService.getData()
-                        }
-                        isFirstAppearance = false
+                        hairStylesList = dataService.getData()
                     })
 
                 }
@@ -87,12 +82,6 @@ struct MainView: View {
     
 }
 
-extension String {
-    func removingWhitespaces() -> String {
-        return self.filter { !$0.isWhitespace }
-    }
-}
-
 #Preview {
-    MainView()
+    Main_View()
 }
