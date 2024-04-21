@@ -14,7 +14,7 @@ struct MainView: View {
     @State private var isFirstAppearance: Bool = true
     @State var sortType = ""
     
-    let filters = ["All", "Low Cut", "Skin Fade", "Drop Fade"]
+    let filters = ["All", "Low Cut", "Skin Fade", "Drop Fade", "Fade"]
     var dataService = DataService()
     
     var body: some View {
