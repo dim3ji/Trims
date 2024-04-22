@@ -12,7 +12,7 @@ struct MainView: View {
     @State var hairStylesList: [HairStyleModel] = []
     @State var selectedImage = String()
     @State private var isFirstAppearance: Bool = true
-    @State var sortType = ""
+    @State var sortType = "All"
     
     let filters = ["All", "Low Cut", "Skin Fade", "Drop Fade"]
     var dataService = DataService()
@@ -53,7 +53,7 @@ struct MainView: View {
                     }
                     
                     ScrollView(showsIndicators:false){
-                        PinterestView(spacing: 2, hairStylesList: hairStylesList)
+                        ResultsView(sort: $sortType, spacing: 2, hairStylesList: hairStylesList)
                     }.onAppear(perform: {
                         if isFirstAppearance{
                             hairStylesList = dataService.getData()

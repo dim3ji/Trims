@@ -16,21 +16,23 @@ struct ModalView: View {
     let maxHeight: CGFloat = 700
     
     var body: some View {
-        ZStack(alignment: .bottom){
-        if isShowing{
-                Color.black
-                    .opacity(0.3)
-                    .ignoresSafeArea()
-                    .onTapGesture {
-                        isShowing = false
-                    }
-                mainView
-                    .transition(.move(edge: .bottom))
+            ZStack(alignment: .bottom){
+            if isShowing {
+                    Color.black
+                        .opacity(0.3)
+                        .ignoresSafeArea()
+                        .onTapGesture {
+                            isShowing = false
+                        }
+
+                    mainView
+                        .transition(.move(edge: .bottom))
+                }
             }
-        }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
         .ignoresSafeArea()
-        .animation(.easeIn)
+        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/(duration: 0.2), value: isShowing)
+
     }
     var mainView: some View{
         VStack{
@@ -52,14 +54,15 @@ struct ModalView: View {
                     Spacer()
                     Text("Haircut Info")
                         .font(.system(size: 15, weight: .regular))
+                        .foregroundStyle(.white)
                     Spacer()
                     Button(action: {
                         isShowing = false
                     }, label: {
                         Text("Close")
-                        .font(.system(size: 15, weight: .regular))
+                            .font(.system(size: 15, weight: .regular))
+                            .foregroundStyle(.white)
                     })
-                    
                 }
                 .padding(.horizontal)
             }
@@ -90,7 +93,7 @@ struct ModalView: View {
     }
     
     @State private var prevDragTranslation = CGSize.zero
-    var dragGesture: some Gesture{
+    var dragGesture: some Gesture {
         
         DragGesture(minimumDistance: 0, coordinateSpace: .global)
             .onChanged { val in
@@ -110,6 +113,6 @@ struct ModalView: View {
 
 struct ModalView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedStyleView(selectedImage: "MidFades")
+        SelectedStyleView(selectedImage: "MidFades", title: Binding.constant("TITLE_Modal"))
     }
 }

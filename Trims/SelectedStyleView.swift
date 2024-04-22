@@ -11,10 +11,10 @@ struct SelectedStyleView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var showModel = false
     var selectedImage: String
-     var title = "Title" // Add a title property
+    @Binding var title: String
     
     var body: some View {
-        NavigationView { // Wrap your view in a NavigationView
+        NavigationView {
             ZStack {
                 Color(.black).ignoresSafeArea()
                 VStack {
@@ -29,8 +29,8 @@ struct SelectedStyleView: View {
                     }
                 }
                 .foregroundColor(.white)
+                ModalView(isShowing: $showModel)
             }
-            .navigationBarBackButtonHidden(true) // Hide default back button
             .navigationBarTitle(title, displayMode: .inline) // Set navigation title
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -41,10 +41,9 @@ struct SelectedStyleView: View {
                     }
                 }
             }
-            .sheet(isPresented: $showModel) {
-                ModalView(isShowing: $showModel)
-            }
-        }.onAppear(perform: {
+                
+        }.navigationBarBackButtonHidden()
+        .onAppear(perform: {
             // Change the color of the navigation title
             UINavigationBar.appearance().titleTextAttributes = [
                 .foregroundColor: UIColor(.white),
@@ -54,5 +53,5 @@ struct SelectedStyleView: View {
     }
 }
 #Preview {
-    SelectedStyleView(selectedImage: "MidFades")
+    SelectedStyleView(selectedImage: "MidFades", title: Binding.constant("My Title"))
 }

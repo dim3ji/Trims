@@ -12,19 +12,19 @@ struct DataService {
     func getData() -> [HairStyleModel]{
         
         return [
-                HairStyleModel(imageName: "Bellingham", tags: ["Fade","Low","MidFade","Waves"]),
-                HairStyleModel(imageName: "ShortFade", tags: ["Fade","Low","LowCut","Waves"]),
-                HairStyleModel(imageName: "LowFade", tags: ["Fade","SkinFade","LowCut","Waves"]),
-                HairStyleModel(imageName: "SkinFade", tags: ["Fade","LowCut","SkinFade","Waves"]),
-                HairStyleModel(imageName: "Taper", tags: ["Fade","Low","DropFade","Waves"]),
-                HairStyleModel(imageName: "Taper", tags: ["Fade","Low","DropFade","Waves"]),
-                HairStyleModel(imageName: "TaperFade", tags: ["Fade","Low","MidFade","Waves"]),
-                HairStyleModel(imageName: "DropFade", tags: ["Fade","Low","DropFade","Waves"]),
-                HairStyleModel(imageName: "DropFade", tags: ["Fade","Low","DropFade","Waves"]),
-                HairStyleModel(imageName: "LowFade", tags: ["Fade","Low","MidFade","Waves"]),
-                HairStyleModel(imageName: "MidFade", tags: ["Fade","Mid","MidFade","Waves"]),
-                HairStyleModel(imageName: "MidFades", tags: ["Fade","Low","MidFade","Waves"]),
-                HairStyleModel(imageName: "Bellingham", tags: ["Fade","Low","MidFade","Waves"])
+                HairStyleModel(imageUrl: "Bellingham", tags: ["Fade","Low","MidFade","Waves"], info: "This is the information"),
+                HairStyleModel(imageUrl: "ShortFade", tags: ["Fade","Low","LowCut","Waves"], info: "This is the information"),
+                HairStyleModel(imageUrl: "LowFade", tags: ["Fade","SkinFade","LowCut","Waves"], info: "This is the information"),
+                HairStyleModel(imageUrl: "SkinFade", tags: ["Fade","LowCut","SkinFade","Waves"], info: "This is the information"),
+                HairStyleModel(imageUrl: "Taper", tags: ["Fade","Low","DropFade","Waves"], info: "This is the information"),
+                HairStyleModel(imageUrl: "Taper", tags: ["Fade","Low","DropFade","Waves"], info: "This is the information"),
+                HairStyleModel(imageUrl: "TaperFade", tags: ["Fade","Low","MidFade","Waves"], info: "This is the information"),
+                HairStyleModel(imageUrl: "DropFade", tags: ["Fade","Low","DropFade","Waves"], info: "This is the information"),
+                HairStyleModel(imageUrl: "DropFade", tags: ["Fade","Low","DropFade","Waves"], info: "This is the information"),
+                HairStyleModel(imageUrl: "LowFade", tags: ["Fade","Low","MidFade","Waves"], info: "This is the information"),
+                HairStyleModel(imageUrl: "MidFade", tags: ["Fade","Mid","MidFade","Waves"], info: "This is the information"),
+                HairStyleModel(imageUrl: "MidFades", tags: ["Fade","Low","MidFade","Waves"], info: "This is the information"),
+                HairStyleModel(imageUrl: "Bellingham", tags: ["Fade","Low","MidFade","Waves"], info: "This is the information")
             ]
     }
     
