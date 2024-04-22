@@ -9,7 +9,7 @@ import Foundation
 
 struct HairStyleModel : Identifiable {
     var id : UUID = UUID()
-    var imageName : String
+    var imageUrl : String
     var tags : [String]
-    
+    var info : String
 }

@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct HairStyleView: View {
-    var hairStyle : HairStyleModel
+    let imageName: String
+    @Binding var sort: String
+
     var body: some View {
-        VStack{
-            Image(hairStyle.imageName)
+        NavigationLink(destination: SelectedStyleView(selectedImage: imageName, title: $sort)) {
+            Image(imageName)
                 .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 200)
-                .clipped()
+                .aspectRatio(contentMode: .fit)
         }
     }
 }
 
+
 #Preview {
-    HairStyleView(hairStyle: HairStyleModel(imageName: "Bellingham", tags: ["Fade","Low","MidFade","Waves"]))
+    HairStyleView(imageName: "Bellingham", sort: Binding.constant("Low Cut"))
 }
